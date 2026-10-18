@@ -2,7 +2,7 @@ import { QueryClient } from "@tanstack/react-query";
 import { createMemoryHistory, createRouter } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
-import { SITE_URL } from "@/content/site";
+import { projects, SITE_URL } from "@/content/site";
 import { routeTree } from "@/routeTree.gen";
 
 async function loadAt(path: string) {
@@ -25,6 +25,13 @@ describe("App routing", () => {
   it("uses GitHub Pages metadata instead of Lovable branding", () => {
     expect(SITE_URL).toBe("https://dzmitry11.github.io/web-engineering-lab");
     expect(SITE_URL).not.toContain("lovable");
+  });
+
+  it("provides live website links for production projects", () => {
+    expect(projects.find((project) => project.key === "dinlia")?.url).toBe("https://www.dinlia.se");
+    expect(projects.find((project) => project.key === "oriole")?.url).toBe("https://oriolepartner.pl");
+    expect(projects.find((project) => project.key === "ipdiary")?.url).toBe("https://ipdiary.eu");
+    expect(projects.find((project) => project.key === "scania")?.url).toBeUndefined();
   });
 
   it("loads the index route without a loader error", async () => {

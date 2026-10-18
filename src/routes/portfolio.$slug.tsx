@@ -78,7 +78,8 @@ function ProjectCase() {
                   rel="noreferrer noopener"
                   onClick={() => track("project_link_clicked", { project: project.key, kind: "site" })}
                 >
-                  {t.cta.visit} <ArrowUpRight className="size-4" />
+                  <span className="font-bold">{t.cta.visit}</span>
+                  <ArrowUpRight className="size-4" />
                 </a>
               </Button>
             ) : (

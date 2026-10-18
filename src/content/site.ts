@@ -91,7 +91,7 @@ export const projects: Project[] = [
     filters: ["web"],
     tech: ["React", "TypeScript", "TanStack", "Vite", "Vercel"],
     highlights: ["Cloud deployment", "Typed routing", "CI deployments"],
-    url: undefined,
+    url: "https://oriolepartner.pl",
     github: "https://github.com/Dzmitry11/oriolepartner",
   },
   {
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     filters: ["web", "backend"],
     tech: ["React", "TypeScript", "PostgreSQL", "REST APIs"],
     highlights: ["Authentication", "Per-user data isolation", "Relational data model"],
-    url: undefined,
+    url: "https://ipdiary.eu",
   },
 ];
 
