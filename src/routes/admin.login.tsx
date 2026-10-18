@@ -10,7 +10,7 @@ import { useI18n } from "@/i18n";
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
-      { title: "Admin Sign In — Dzmitry Nikalayeu" },
+      { title: "Admin Sign In - Dzmitry Nikalayeu" },
       { name: "description", content: "Restricted admin sign-in for the site owner." },
       { name: "robots", content: "noindex, nofollow" },
     ],
@@ -66,7 +66,7 @@ function AdminLogin() {
       try {
         await supabase.rpc("claim_owner_admin");
       } catch {
-        // ignore — not the owner or already claimed
+        // ignore - not the owner or already claimed
       }
       router.navigate({ to: "/admin" });
     } catch {

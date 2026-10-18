@@ -63,7 +63,7 @@ Work preference: ${data.preference}`;
       return { ok: true, summary, nextStep };
     } catch (e) {
       const status = (e as { statusCode?: number }).statusCode;
-      if (status === 429) return { ok: false, error: "Too many requests — please try again in a minute." };
+      if (status === 429) return { ok: false, error: "Too many requests - please try again in a minute." };
       if (status === 402 || status === 403) return { ok: false, error: "AI summary is temporarily unavailable." };
       console.error(e);
       return { ok: false, error: "Could not generate a summary." };

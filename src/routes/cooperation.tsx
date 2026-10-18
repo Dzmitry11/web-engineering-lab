@@ -11,7 +11,7 @@ import { track } from "@/lib/analytics";
 export const Route = createFileRoute("/cooperation")({
   head: () => ({
     meta: [
-      { title: "Cooperation & B2B Rates — Dzmitry Nikalayeu" },
+      { title: "Cooperation & B2B Rates - Dzmitry Nikalayeu" },
       {
         name: "description",
         content:

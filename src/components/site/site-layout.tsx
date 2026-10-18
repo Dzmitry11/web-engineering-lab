@@ -47,7 +47,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="container-site flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={welLogo} alt="WEL — Web Engineering Lab" className="h-8 w-14 shrink-0" />
+          <img src={welLogo} alt="WEL - Web Engineering Lab" className="h-8 w-14 shrink-0" />
           <span className="font-mono text-[10px] leading-tight text-muted-foreground sm:hidden">
             Web Engineering Lab
           </span>

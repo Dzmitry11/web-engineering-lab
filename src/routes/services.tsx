@@ -12,7 +12,7 @@ import { useEffect } from "react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Web, Backend, Cloud & AI Engineering" },
+      { title: "Services - Web, Backend, Cloud & AI Engineering" },
       {
         name: "description",
         content:
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/services")({
       {
         property: "og:description",
         content:
-          "Web development, backend & APIs, cloud & DevOps, AI/LLM integration and technical consulting — from a landing page to a production platform on Kubernetes.",
+          "Web development, backend & APIs, cloud & DevOps, AI/LLM integration and technical consulting - from a landing page to a production platform on Kubernetes.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

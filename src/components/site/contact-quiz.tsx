@@ -36,7 +36,7 @@ type Form = {
   email: string;
   phone: string;
   company: string;
-  website: string; // honeypot — must stay empty
+  website: string; // honeypot - must stay empty
 };
 
 const EMPTY: Form = {
@@ -273,13 +273,13 @@ export function ContactQuiz() {
     { label: t.quiz.q1, value: form.services.join(", "), step: "services" },
     { label: t.quiz.q2, value: form.description, step: "description" },
     { label: t.quiz.q3, value: form.stage, step: "stage" },
-    { label: t.quiz.q4, value: form.budget || "—", step: "budget" },
+    { label: t.quiz.q4, value: form.budget || "-", step: "budget" },
     { label: t.quiz.q5, value: form.timeline, step: "timeline" },
     { label: t.quiz.q6, value: form.preference, step: "preference" },
     { label: t.quiz.name, value: form.name, step: "details" },
     { label: t.quiz.email, value: form.email, step: "details" },
-    { label: t.quiz.phone, value: form.phone || "—", step: "details" },
-    { label: t.quiz.company, value: form.company || "—", step: "details" },
+    { label: t.quiz.phone, value: form.phone || "-", step: "details" },
+    { label: t.quiz.company, value: form.company || "-", step: "details" },
   ];
 
   return (
@@ -465,7 +465,7 @@ export function ContactQuiz() {
                   <dt className="w-40 shrink-0 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">
                     {row.label}
                   </dt>
-                  <dd className="flex-1 text-sm leading-relaxed text-foreground">{row.value || "—"}</dd>
+                  <dd className="flex-1 text-sm leading-relaxed text-foreground">{row.value || "-"}</dd>
                   <button
                     type="button"
                     onClick={() => setIndex(STEPS.indexOf(row.step))}

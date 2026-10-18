@@ -14,9 +14,9 @@ import { track } from "@/lib/analytics";
 export const Route = createFileRoute("/portfolio/$slug")({
   head: ({ params }) => {
     const project = projects.find((p) => p.key === params.slug);
-    const title = project ? `${project.name} — Case Study` : "Project case study";
+    const title = project ? `${project.name} - Case Study` : "Project case study";
     const description = project
-      ? `${project.name}: ${project.tech.join(", ")} — engineering case study by Dzmitry Nikalayeu.`
+      ? `${project.name}: ${project.tech.join(", ")} - engineering case study by Dzmitry Nikalayeu.`
       : "Engineering case studies by Dzmitry Nikalayeu.";
     return {
       meta: [

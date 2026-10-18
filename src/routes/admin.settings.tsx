@@ -9,7 +9,7 @@ import { useI18n } from "@/i18n";
 export const Route = createFileRoute("/admin/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — Admin — Dzmitry Nikalayeu" },
+      { title: "Settings - Admin - Dzmitry Nikalayeu" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -40,7 +40,7 @@ function AdminSettings() {
       <div className="mt-8 max-w-lg space-y-6">
         <div className="border border-border bg-surface p-6">
           <p className="eyebrow">{t.admin.account}</p>
-          <p className="mt-3 text-sm text-foreground">{email ?? "—"}</p>
+          <p className="mt-3 text-sm text-foreground">{email ?? "-"}</p>
           <Button variant="quiet" className="mt-5" onClick={signOut}>
             {t.admin.signOut}
           </Button>

@@ -81,18 +81,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dzmitry Nikalayeu — Software & Cloud Engineer" },
+      { title: "Dzmitry Nikalayeu - Software & Cloud Engineer" },
       {
         name: "description",
         content:
           "Independent Software & Cloud Engineer helping businesses build, modernize and maintain reliable digital products: web apps, APIs, AWS infrastructure, DevOps and AI integrations.",
       },
       { name: "author", content: "Dzmitry Nikalayeu" },
-      { property: "og:title", content: "Dzmitry Nikalayeu — Software & Cloud Engineer" },
+      { property: "og:title", content: "Dzmitry Nikalayeu - Software & Cloud Engineer" },
       {
         property: "og:description",
         content:
-          "Web, backend, cloud and AI engineering for businesses. One engineer across the whole delivery chain — idea to production.",
+          "Web, backend, cloud and AI engineering for businesses. One engineer across the whole delivery chain - idea to production.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },

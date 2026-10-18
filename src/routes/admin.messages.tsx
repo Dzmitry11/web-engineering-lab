@@ -26,7 +26,7 @@ export const Route = createFileRoute("/admin/messages")({
   },
   head: () => ({
     meta: [
-      { title: "Messages — Admin — Dzmitry Nikalayeu" },
+      { title: "Messages - Admin - Dzmitry Nikalayeu" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -259,23 +259,23 @@ function AdminMessages() {
                 </div>
                 <div>
                   <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{t.admin.services}</dt>
-                  <dd className="mt-1">{(current.services ?? []).join(", ") || "—"}</dd>
+                  <dd className="mt-1">{(current.services ?? []).join(", ") || "-"}</dd>
                 </div>
                 <div>
                   <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{t.admin.stage}</dt>
-                  <dd className="mt-1">{current.project_stage ?? "—"}</dd>
+                  <dd className="mt-1">{current.project_stage ?? "-"}</dd>
                 </div>
                 <div>
                   <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{t.admin.budget}</dt>
-                  <dd className="mt-1">{current.budget ?? "—"}</dd>
+                  <dd className="mt-1">{current.budget ?? "-"}</dd>
                 </div>
                 <div>
                   <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{t.admin.timeline}</dt>
-                  <dd className="mt-1">{current.timeline ?? "—"}</dd>
+                  <dd className="mt-1">{current.timeline ?? "-"}</dd>
                 </div>
                 <div>
                   <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{t.admin.workPref}</dt>
-                  <dd className="mt-1">{current.work_preference ?? "—"}</dd>
+                  <dd className="mt-1">{current.work_preference ?? "-"}</dd>
                 </div>
               </dl>
 

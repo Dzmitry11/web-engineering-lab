@@ -6,7 +6,7 @@ Implement exactly the screenshot and nothing else.
 
 ## Development
 
-Prefer working locally? You need Node.js and Bun — [install with Bun](https://bun.sh).
+Prefer working locally? You need Node.js and Bun - [install with Bun](https://bun.sh).
 
 ```sh
 git clone <this-repository-url>

@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system — Scandinavian technical consultancy.
+ * Design system - Scandinavian technical consultancy.
  * Warm paper neutrals, ink foreground, one restrained pine-green accent.
  * All colors are oklch tokens; components only use semantic utilities.
  */

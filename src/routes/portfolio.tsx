@@ -16,13 +16,13 @@ type Filter = (typeof FILTERS)[number];
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — Production Platforms & Case Studies" },
+      { title: "Portfolio - Production Platforms & Case Studies" },
       {
         name: "description",
         content:
-          "Selected engineering work: DinLIA production SaaS platform, OriolePartner, iPDiary and the Scania internal AI assistant — with the technology and architecture behind each.",
+          "Selected engineering work: DinLIA production SaaS platform, OriolePartner, iPDiary and the Scania internal AI assistant - with the technology and architecture behind each.",
       },
-      { property: "og:title", content: "Portfolio — Projects & case studies" },
+      { property: "og:title", content: "Portfolio - Projects & case studies" },
       {
         property: "og:description",
         content:

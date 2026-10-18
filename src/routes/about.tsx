@@ -11,7 +11,7 @@ import { track } from "@/lib/analytics";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Dzmitry Nikalayeu, Software & Cloud Engineer" },
+      { title: "About - Dzmitry Nikalayeu, Software & Cloud Engineer" },
       {
         name: "description",
         content:
@@ -57,7 +57,7 @@ function About() {
                 />
                 <img
                   src={portrait}
-                  alt={`${contact.name} — ${t.common.role}`}
+                  alt={`${contact.name} - ${t.common.role}`}
                   className="relative aspect-[4/5] w-full border border-border object-cover"
                 />
               </div>

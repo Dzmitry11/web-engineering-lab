@@ -10,17 +10,17 @@ import { useI18n } from "@/i18n";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Dzmitry Nikalayeu" },
+      { title: "Contact - Dzmitry Nikalayeu" },
       {
         name: "description",
         content:
           "Start a project with Dzmitry Nikalayeu: a short questionnaire about your web, backend, cloud or AI project, plus direct email and phone contact.",
       },
-      { property: "og:title", content: "Contact — Dzmitry Nikalayeu" },
+      { property: "og:title", content: "Contact - Dzmitry Nikalayeu" },
       {
         property: "og:description",
         content:
-          "Tell me about your project in two minutes — web development, backend, cloud/DevOps or AI integration.",
+          "Tell me about your project in two minutes - web development, backend, cloud/DevOps or AI integration.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

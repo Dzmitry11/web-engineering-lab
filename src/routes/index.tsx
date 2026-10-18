@@ -13,16 +13,16 @@ import { track } from "@/lib/analytics";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dzmitry Nikalayeu — Software & Cloud Engineer" },
+      { title: "Dzmitry Nikalayeu - Software & Cloud Engineer" },
       {
         name: "description",
         content:
           "Independent Software & Cloud Engineer helping businesses build, modernize and maintain reliable digital products: web apps, APIs, AWS infrastructure, DevOps and AI integrations.",
       },
-      { property: "og:title", content: "Dzmitry Nikalayeu — Software & Cloud Engineer" },
+      { property: "og:title", content: "Dzmitry Nikalayeu - Software & Cloud Engineer" },
       {
         property: "og:description",
-        content: "Web, backend, cloud and AI engineering for businesses — one engineer from idea to production.",
+        content: "Web, backend, cloud and AI engineering for businesses - one engineer from idea to production.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -77,7 +77,7 @@ function Home() {
             <div className="absolute -bottom-3 -right-3 hidden size-full border border-pine/30 lg:block" aria-hidden />
             <img
               src={portrait}
-              alt={`${contact.name} — ${t.common.role}`}
+              alt={`${contact.name} - ${t.common.role}`}
               className="relative aspect-[4/5] w-full border border-border object-cover"
             />
             <figcaption className="mt-4 flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">

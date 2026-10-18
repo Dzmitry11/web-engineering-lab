@@ -25,11 +25,11 @@ function levelClasses(level: Level) {
 export const Route = createFileRoute("/technologies")({
   head: () => ({
     meta: [
-      { title: "Technologies & Tools — Dzmitry Nikalayeu" },
+      { title: "Technologies & Tools - Dzmitry Nikalayeu" },
       {
         name: "description",
         content:
-          "The stack Dzmitry Nikalayeu builds and operates with: AWS, Terraform, Kubernetes, Docker, Java, Python, React, TypeScript, PostgreSQL and AI tooling — grouped by where each fits in a system.",
+          "The stack Dzmitry Nikalayeu builds and operates with: AWS, Terraform, Kubernetes, Docker, Java, Python, React, TypeScript, PostgreSQL and AI tooling - grouped by where each fits in a system.",
       },
       { property: "og:title", content: "Technologies & Tools" },
       {

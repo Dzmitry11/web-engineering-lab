@@ -10,7 +10,7 @@ import { useI18n } from "@/i18n";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Admin — Dzmitry Nikalayeu" },
+      { title: "Admin - Dzmitry Nikalayeu" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
