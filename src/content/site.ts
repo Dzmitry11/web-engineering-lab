@@ -1,7 +1,8 @@
 // Centralised, language-neutral site content. Translatable copy lives in src/i18n.
-import dinliaImg from "@/assets/project-dinlia.jpg";
+import dinliaImg from "@/assets/project-dinlia-screenshot.jpg";
 import aiImg from "@/assets/project-ai-assistant.jpg";
-import webappImg from "@/assets/project-webapp.jpg";
+import orioleImg from "@/assets/project-oriole-partner-screenshot.jpg";
+import ipdiaryImg from "@/assets/project-IpDiary.png";
 import portrait from "@/assets/Photo Dzmitry Nikalayeu.jpeg";
 
 export const SITE_URL = "https://dzmitry11.github.io/web-engineering-lab";
@@ -85,7 +86,7 @@ export const projects: Project[] = [
   {
     key: "oriole",
     name: "OriolePartner",
-    image: webappImg,
+    image: orioleImg,
     status: "production",
     filters: ["web"],
     tech: ["React", "TypeScript", "TanStack", "Vite", "Vercel"],
@@ -96,7 +97,7 @@ export const projects: Project[] = [
   {
     key: "ipdiary",
     name: "iPDiary",
-    image: webappImg,
+    image: ipdiaryImg,
     status: "active",
     filters: ["web", "backend"],
     tech: ["React", "TypeScript", "PostgreSQL", "REST APIs"],
