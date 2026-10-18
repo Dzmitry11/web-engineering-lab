@@ -98,7 +98,7 @@ export const projects: Project[] = [
     key: "ipdiary",
     name: "iPDiary",
     image: ipdiaryImg,
-    status: "active",
+    status: "production",
     filters: ["web", "backend"],
     tech: ["React", "TypeScript", "PostgreSQL", "REST APIs"],
     highlights: ["Authentication", "Per-user data isolation", "Relational data model"],
