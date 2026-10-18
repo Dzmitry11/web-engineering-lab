@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ContactQuiz } from "@/components/site/contact-quiz";
 import { PageHeader, Section } from "@/components/site/primitives";
 import { SitePage } from "@/components/site/site-layout";
+import contactBackground from "@/assets/office-contact.jpg";
 import { contact } from "@/content/site";
 import { useI18n } from "@/i18n";
 
@@ -32,59 +33,79 @@ function ContactPage() {
   const { t } = useI18n();
 
   return (
-    <SitePage>
-      <PageHeader eyebrow={t.contact.eyebrow} title={t.contact.title} lead={t.contact.lead} />
-
-      <Section className="pt-0">
-        <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
-          <ContactQuiz />
-
-          <aside className="space-y-8">
-            <div>
-              <p className="eyebrow">{t.contact.direct}</p>
-              <ul className="mt-4 space-y-4 text-sm">
-                <li>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                    {t.contact.email}
-                  </p>
-                  <a href={`mailto:${contact.email}`} className="mt-1 block text-foreground hover:text-pine">
-                    {contact.email}
-                  </a>
-                </li>
-                <li>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                    {t.contact.phone}
-                  </p>
-                  {contact.phones.map((p) => (
-                    <a key={p.tel} href={`tel:${p.tel}`} className="mt-1 block text-foreground hover:text-pine">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                        {p.label}
-                      </span>{" "}
-                      {p.display}
-                    </a>
-                  ))}
-                </li>
-                <li>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                    {t.contact.location}
-                  </p>
-                  <p className="mt-1 text-foreground">{t.contact.locations.join(" · ")}</p>
-                </li>
-                <li>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                    {t.contact.availability}
-                  </p>
-                  <ul className="mt-1 space-y-1 text-foreground">
-                    {t.contact.availabilityItems.map((a) => (
-                      <li key={a}>{a}</li>
-                    ))}
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </aside>
+    <SitePage background={false}>
+      <div className="relative isolate">
+        <div aria-hidden className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+          <img
+            src={contactBackground}
+            alt=""
+            className="h-full w-full object-cover object-[center_42%] opacity-30 grayscale"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/45 via-background/80 to-background" />
+          <div className="absolute inset-0 bg-sky-50/25 mix-blend-screen" />
         </div>
-      </Section>
+        <div className="relative z-10">
+          <PageHeader eyebrow={t.contact.eyebrow} title={t.contact.title} lead={t.contact.lead} />
+
+          <Section className="pt-0">
+            <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
+              <ContactQuiz />
+
+              <aside className="space-y-8">
+                <div>
+                  <p className="eyebrow">{t.contact.direct}</p>
+                  <ul className="mt-4 space-y-4 text-sm">
+                    <li>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                        {t.contact.email}
+                      </p>
+                      <a
+                        href={`mailto:${contact.email}`}
+                        className="mt-1 block text-foreground hover:text-pine"
+                      >
+                        {contact.email}
+                      </a>
+                    </li>
+                    <li>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                        {t.contact.phone}
+                      </p>
+                      {contact.phones.map((p) => (
+                        <a
+                          key={p.tel}
+                          href={`tel:${p.tel}`}
+                          className="mt-1 block text-foreground hover:text-pine"
+                        >
+                          <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                            {p.label}
+                          </span>{" "}
+                          {p.display}
+                        </a>
+                      ))}
+                    </li>
+                    <li>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                        {t.contact.location}
+                      </p>
+                      <p className="mt-1 text-foreground">{t.contact.locations.join(" · ")}</p>
+                    </li>
+                    <li>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                        {t.contact.availability}
+                      </p>
+                      <ul className="mt-1 space-y-1 text-foreground">
+                        {t.contact.availabilityItems.map((a) => (
+                          <li key={a}>{a}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+          </Section>
+        </div>
+      </div>
     </SitePage>
   );
 }

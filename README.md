@@ -23,3 +23,8 @@ This project is configured for GitHub Pages hosting, with a static-friendly base
 2. Enable GitHub Pages in the repository settings.
 3. Publish from the `gh-pages` branch or use a GitHub Actions workflow.
 4. Update the `SITE_URL` value if you use a custom domain or a different repository name.
+
+## Photo credits
+
+- Site background: Madeline Liu, [Modern black and white office with empty workstations](https://unsplash.com/photos/modern-black-and-white-office-with-empty-workstations-geyu2Vyesrk), Unsplash License.
+- Contact background: Deliberate Directions, [Modern office space with glass walls and light decor](https://unsplash.com/photos/modern-office-space-with-glass-walls-and-light-decor-wlHBYkK2y4k), Unsplash License.

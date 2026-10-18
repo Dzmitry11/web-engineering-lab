@@ -4,6 +4,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import welLogo from "@/assets/logo-wel.svg";
+import officeBackground from "@/assets/office-open-space.jpg";
 import { contact, navigation } from "@/content/site";
 import { LOCALES, useI18n } from "@/i18n";
 import { cn } from "@/lib/utils";
@@ -11,7 +12,11 @@ import { cn } from "@/lib/utils";
 function LanguageSwitch({ className }: { className?: string }) {
   const { t, locale, setLocale } = useI18n();
   return (
-    <div className={cn("flex items-center gap-1", className)} role="group" aria-label={t.nav.language}>
+    <div
+      className={cn("flex items-center gap-1", className)}
+      role="group"
+      aria-label={t.nav.language}
+    >
       {LOCALES.map((l) => (
         <button
           key={l}
@@ -20,7 +25,9 @@ function LanguageSwitch({ className }: { className?: string }) {
           aria-pressed={l === locale}
           className={cn(
             "px-1.5 py-1 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors",
-            l === locale ? "text-pine underline underline-offset-4" : "text-muted-foreground hover:text-foreground",
+            l === locale
+              ? "text-pine underline underline-offset-4"
+              : "text-muted-foreground hover:text-foreground",
           )}
         >
           {l}
@@ -42,7 +49,9 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={welLogo} alt="WEL — Web Engineering Lab" className="h-8 w-14 shrink-0" />
           <span className="hidden flex-col leading-tight sm:flex">
-            <span className="font-display text-[0.95rem] font-semibold tracking-tight">{contact.name}</span>
+            <span className="font-display text-[0.95rem] font-semibold tracking-tight">
+              {contact.name}
+            </span>
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
               {t.common.role}
             </span>
@@ -121,7 +130,9 @@ export function SiteFooter() {
       <div className="container-site grid gap-10 py-14 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <p className="font-display text-lg font-semibold tracking-tight">{contact.name}</p>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">{t.common.positioning}</p>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            {t.common.positioning}
+          </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a
               href={contact.linkedin}
@@ -192,10 +203,30 @@ export function SiteFooter() {
   );
 }
 
-export function SitePage({ children }: { children: ReactNode }) {
+export function SitePage({
+  children,
+  background = true,
+}: {
+  children: ReactNode;
+  background?: boolean;
+}) {
   const { t } = useI18n();
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="relative isolate flex min-h-screen flex-col">
+      {background && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[min(84vh,54rem)] overflow-hidden"
+        >
+          <img
+            src={officeBackground}
+            alt=""
+            className="h-full w-full object-cover object-[center_38%] opacity-35 grayscale"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/45 via-background/80 to-background" />
+          <div className="absolute inset-0 bg-sky-50/20 mix-blend-screen" />
+        </div>
+      )}
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:border focus:border-border focus:bg-surface focus:px-3 focus:py-2 focus:text-sm"
@@ -203,7 +234,7 @@ export function SitePage({ children }: { children: ReactNode }) {
         {t.nav.skip}
       </a>
       <SiteHeader />
-      <main id="main" className="flex-1">
+      <main id="main" className="relative z-10 flex-1">
         {children}
       </main>
       <SiteFooter />
