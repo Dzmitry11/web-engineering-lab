@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" role="img" aria-labelledby="title">
+  <title id="title">WEL — Web Engineering Lab</title>
+  <g fill="none" stroke="#123B37" stroke-linecap="square" stroke-linejoin="miter" stroke-width="5">
+    <path d="M8 10 14 38 23 20 32 38 38 10" />
+    <path d="M44 10h17M44 10v28M44 24h14M44 38h17" />
+    <path d="M68 10v28h16" />
+  </g>
+  <path d="M44 24h14" fill="none" stroke="#38DCC7" stroke-linecap="square" stroke-width="5" />
+  <circle cx="88" cy="10" r="3.5" fill="#D9F36A" />
+</svg>

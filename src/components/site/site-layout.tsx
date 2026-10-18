@@ -3,6 +3,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import welLogo from "@/assets/logo-wel.svg";
 import { contact, navigation } from "@/content/site";
 import { LOCALES, useI18n } from "@/i18n";
 import { cn } from "@/lib/utils";
@@ -39,9 +40,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="container-site flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-8 w-8 items-center justify-center rounded-sm border border-pine/40 bg-pine-soft font-mono text-xs font-semibold text-pine">
-            DN
-          </span>
+          <img src={welLogo} alt="WEL — Web Engineering Lab" className="h-8 w-14 shrink-0" />
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-[0.95rem] font-semibold tracking-tight">{contact.name}</span>
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
