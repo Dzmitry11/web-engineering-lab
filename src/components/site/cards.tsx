@@ -88,7 +88,7 @@ export function ProjectCard({ project }: { project: Project }) {
               target="_blank"
               rel="noreferrer noopener"
               onClick={() => track("project_link_clicked", { project: project.key, kind: "site" })}
-              className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground hover:text-pine"
+              className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground hover:text-pine"
             >
               {t.cta.visit}
             </a>
