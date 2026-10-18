@@ -4,7 +4,7 @@ import aiImg from "@/assets/project-ai-assistant.jpg";
 import webappImg from "@/assets/project-webapp.jpg";
 import portrait from "@/assets/Photo Dzmitry Nikalayeu.jpeg";
 
-export const SITE_URL = "https://dzmitry11.github.io/pixel-perfect-render-8051";
+export const SITE_URL = "https://dzmitry11.github.io/web-engineering-lab";
 
 export { portrait };
 

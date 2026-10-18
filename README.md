@@ -2,7 +2,7 @@
 
 Implement exactly the screenshot and nothing else.
 
-**Live app**: https://dzmitry11.github.io/pixel-perfect-render-8051
+**Live app**: https://dzmitry11.github.io/web-engineering-lab
 
 ## Development
 

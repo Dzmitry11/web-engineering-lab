@@ -23,7 +23,7 @@ function failedMatches(matches: Awaited<ReturnType<typeof loadAt>>) {
 // holds the whole render until any stylesheet link in the root head loads.
 describe("App routing", () => {
   it("uses GitHub Pages metadata instead of Lovable branding", () => {
-    expect(SITE_URL).toBe("https://dzmitry11.github.io/pixel-perfect-render-8051");
+    expect(SITE_URL).toBe("https://dzmitry11.github.io/web-engineering-lab");
     expect(SITE_URL).not.toContain("lovable");
   });
 

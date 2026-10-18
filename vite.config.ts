@@ -8,10 +8,10 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
-    base: "/pixel-perfect-render-8051/",
+    base: "/web-engineering-lab/",
   },
   tanstackStart: {
-    router: { basepath: "/pixel-perfect-render-8051" },
+    router: { basepath: "/web-engineering-lab" },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
