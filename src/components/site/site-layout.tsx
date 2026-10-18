@@ -48,6 +48,9 @@ export function SiteHeader() {
       <div className="container-site flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={welLogo} alt="WEL — Web Engineering Lab" className="h-8 w-14 shrink-0" />
+          <span className="font-mono text-[10px] leading-tight text-muted-foreground sm:hidden">
+            Web Engineering Lab
+          </span>
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-[0.95rem] font-semibold tracking-tight">
               {contact.name}
